@@ -10,11 +10,12 @@ function recuperarFloat(idComponente){
     return valorFloat;
 }
 function crearTarjetas(){
+    let salto = recuperarFloat("textoSalto")
     let desde = recuperarFloat("textoDesde");
     let hasta = recuperarFloat("textoHasta");
     let contenido ="";
     let divTarjetas = document.getElementById("divTarjetas")
-    for(let i=desde; i<=hasta; i++){
+    for(let i=desde; i<=hasta; i+=salto){
         contenido = contenido + "<div class='item'>"+i+"</div>";
         divTarjetas.innerHTML = contenido;
     }
